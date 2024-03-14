@@ -5,6 +5,7 @@ class ClientDto {
   public createClient = (req: Request, res: Response) => { res }
   public updateClient = (req: Request, res: Response) => { res }
   public deleteClient = (req: Request, res: Response) => { res }
+  public getClientById = (req: Request, res: Response) => { res }
 }
 
 export default ClientDto;
