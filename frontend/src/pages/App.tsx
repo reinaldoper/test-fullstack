@@ -1,11 +1,12 @@
 import '../styles/App.css'
+import InitialPage from '../components/InitialPage'
 
 function App() {
-  
+
 
   return (
     <>
-      <h1>Cheguei...</h1>
+      <InitialPage />
     </>
   )
 }
