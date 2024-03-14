@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import clientApi from "../services/fethApi";
+import clientApi from "../services/fetchApi";
 
 const InitialPage = () => {
   const [clients, setClients] = useState([])
