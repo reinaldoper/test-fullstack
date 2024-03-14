@@ -27,12 +27,26 @@ class ClientsController implements ClientDto {
       res.status(Status.InternalError).json({ error: 'Internal server error.' });
     }
   };
-  
-  public updateClient = () => {
+
+  public updateClient = async (req: Request, res: Response) => {
+    try {
+      const { id } = req.params;
+      const { status } = req.body;
+      const client = await this.client.updateClient(Number(id), status);
+      return res.status(Status.OK).json({ message: client });
+    } catch (error) {
+      res.status(Status.InternalError).json({ error: 'Internal server error.' });
+    }
 
   };
-  public deleteClient = () => {
-
+  public deleteClient = async (req: Request, res: Response) => {
+    try {
+      const { id } = req.params;
+      const client = await this.client.deleteClient(Number(id));
+      return res.status(Status.OK).json({ message: client });
+    } catch (error) {
+      res.status(Status.InternalError).json({ error: 'Internal server error.' });
+    }
   };
 
 }
