@@ -42,8 +42,7 @@ class ClientsController implements ClientDto {
   public updateClient = async (req: Request, res: Response) => {
     try {
       const { id } = req.params;
-      const { status } = req.body;
-      const client = await this.client.updateClient(Number(id), status);
+      const client = await this.client.updateClient(Number(id), req.body);
       return res.status(Status.OK).json({ message: client });
     } catch (error) {
       res.status(Status.InternalError).json({ error: 'Internal server error.' });

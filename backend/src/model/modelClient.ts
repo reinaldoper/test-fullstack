@@ -20,15 +20,21 @@ class ClientModel {
     });
     return client;
   }
-  
-  public updateClient = async (id: number, status: string): Promise<TClients | string> => {
+
+  public updateClient = async (id: number, body: TClients ): Promise<TClients | string> => {
     const verify = await this.getClient(id);
     if (!verify) {
       return 'client not found'
     }
     const client = await this.prismaClient.clients.update({
       where: { id: id },
-      data: { status: status },
+      data: { 
+        status: body.status,
+        email: body.email,
+        cpf: body.cpf,
+        telefone: body.telefone,
+        nome: body.nome,
+       },
       select: {
         nome: true,
         email: true,
