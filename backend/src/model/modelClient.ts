@@ -50,6 +50,7 @@ class ClientModel {
   public getClients = async (): Promise<TClients[]>  => {
     const clients = await this.prismaClient.clients.findMany({
       select: {
+        id: true,
         nome: true,
         status: true,
         cpf: true,
@@ -79,6 +80,7 @@ class ClientModel {
     const client = await this.prismaClient.clients.findUnique({
       where: { id: id },
       select: {
+        id: true,
         nome: true,
         email: true,
         telefone: true,

@@ -1,4 +1,4 @@
-# Aplicativo de Gerenciamento de Clientes:
+# Aplicativo de Gerenciamento de Clientes, feito em React-vite e typeScript:
 
 - Este projeto tem a finalidade de criar, listar, editar e excluir clientes.
 

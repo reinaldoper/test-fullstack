@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TClients, TChangeEvent } from '../types/TTypes';
+import { TClients, TChangeEvent, initialState } from '../types/TTypes';
 import { FormEvent } from "react";
 import '../styles/App.css'
 import { validaTePhone, validateCPF } from '../utils/validateCpfPhone';
@@ -8,14 +8,6 @@ import clientApi from '../services/fetchApi';
 
 const CreateClient = () => {
   const navigate = useNavigate();
-
-  const initialState: TClients = {
-    nome: '',
-    email: '',
-    telefone: '',
-    cpf: '',
-    status: ''
-  };
 
   const [formData, setFormData] = useState<TClients>(initialState);
 

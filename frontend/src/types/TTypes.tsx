@@ -1,5 +1,6 @@
 
 export interface TClients {
+  id?: number;
   nome: string;
   telefone: string;
   email: string;
@@ -14,3 +15,11 @@ export interface TChangeEvent {
     value: string;
   };
 }
+
+export  const initialState: TClients = {
+  nome: '',
+  email: '',
+  telefone: '',
+  cpf: '',
+  status: ''
+};
