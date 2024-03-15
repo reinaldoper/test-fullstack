@@ -4,12 +4,25 @@
 ---
 
 
-### Aplicação que cria, buscar, edita e exclui clientes.
+### API que cria, buscar, edita e exclui clientes.
 - Para está aplicação foi utilizado o DB PostgreSQL.
 - Como ORM foi utilizado o Prisma.
+- Ambiente de desenvolvimento nodeJs v16xx.
 
 
 ---
+
+
+### Dependências:
+
+```shell
+"dependencies": {
+    "@prisma/client": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2"
+}
+```
 
 
 - Clone o projeto.
