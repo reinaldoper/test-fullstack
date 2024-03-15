@@ -1,4 +1,4 @@
-# Projeto full-stack teste uol:
+# Aplicativo de Gerenciamento de Clientes:
 
 - Este projeto tem a finalidade de criar, listar, editar e excluir clientes.
 
@@ -15,7 +15,6 @@
   {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "cross-fetch": "^4.0.0",
     "react-router-dom": "^6.21.3"
   }
 ```

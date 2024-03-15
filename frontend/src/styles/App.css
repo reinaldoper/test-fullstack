@@ -1,0 +1,52 @@
+
+
+.custom-background{
+  text-align: center;
+  background-color: #333333;
+}
+
+#image{
+  height: 50px;
+  margin-left: 10%;
+  margin-top: 6%;
+  overflow-clip-margin: content-box;
+}
+
+.section{
+  display: flex;
+  -webkit-user-select: none;
+  margin: auto;
+}
+.section > p{
+  margin-top: 7%;
+  color: #333333;
+  font-size: large;
+  font-weight: normal;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+
+.container-nav > h5, p{
+  font-size: medium;
+  color: #4e4d4d;
+}
+
+
+.button-nav {
+  padding: 10px 30px;
+  background-color: rgb(250, 155, 67);
+  border: none;
+  border-radius: 5px;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.section-app{
+  max-width: 80%;
+  margin: auto;
+}
