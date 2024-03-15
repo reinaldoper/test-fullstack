@@ -12,9 +12,9 @@ function App() {
       <Header />
       <Section />
       <div className='section-app'>
-        <hr />
+        <hr className='custom-hr' />
         <Nav />
-        <hr />
+        <hr className='custom-hr' />
         <InitialPage />
       </div>
     </>

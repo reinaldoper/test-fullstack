@@ -29,6 +29,9 @@
   justify-content: space-between; 
   align-items: center; 
 }
+.custom-hr{
+  border-color: #e6e0e0;
+}
 
 
 .container-nav > h5, p{
@@ -49,4 +52,35 @@
 .section-app{
   max-width: 80%;
   margin: auto;
+}
+
+input{
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border-color: #333333;
+  width: 220px;
+}
+
+select{
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 220px;
+  border-radius: 5px;
+  border-color: #333333;
+}
+
+.button-back{
+  padding: 10px 30px;
+  background-color: rgb(245, 241, 237);
+  border: none;
+  border-radius: 5px;
+  color: rgb(10, 10, 10);
+  cursor: pointer;
+  border: 0.5px solid #333333;
+  margin-left: 35px;
+}
+
+.form-buttons{
+  display: flex;
 }
