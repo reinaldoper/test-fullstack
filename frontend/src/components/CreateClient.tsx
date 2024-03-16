@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { TClients, TChangeEvent, initialState } from '../types/TTypes';
 import { FormEvent } from "react";
 import '../styles/App.css'
-import { validaTePhone, validateCPF } from '../utils/validateCpfPhone';
+import { validaTePhone, validateCPF } from '../utils/validateCpfPhoneStatus';
 import { useNavigate } from 'react-router-dom';
 import clientApi from '../services/fetchApi';
 import InitialHeader from './InitialHeader';
@@ -111,12 +111,12 @@ const CreateClient = () => {
           <option value="Ativo">Ativo</option>
           <option value="Inativo">Inativo</option>
           <option value="Aguardando ativação">Aguardando ativação</option>
-          <option value="Desativo">Desativado</option>
+          <option value="Desativado">Desativado</option>
         </select>
         <br />
         <div className='form-buttons'>
           <button className='button-nav' type="submit">Criar</button>
-          <button className='button-back' onClick={handleBackClick} type="button">Voltar</button>
+          <button className='button-edit' onClick={handleBackClick} type="button">Voltar</button>
         </div>
       </form>
     </>

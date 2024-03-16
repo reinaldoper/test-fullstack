@@ -1,6 +1,6 @@
 # Aplicativo de Gerenciamento de Clientes, feito em React-vite e typeScript, e usando a lib w3.css:
 
-- Este projeto tem a finalidade de criar, listar, editar e excluir clientes.
+- Este projeto tem a finalidade de criar, listar, editar clientes.
 
 ## Este projeto necessita do backend em execução:
 
@@ -39,10 +39,7 @@
 ```
 
 
-## Clone a aplicação.
-
-
-### dentro da pasta frontend:
+### Dentro da pasta frontend:
 
  
  ```shell

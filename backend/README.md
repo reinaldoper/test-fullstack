@@ -18,7 +18,7 @@
 
 
 ```shell
-"dependencies": {
+ {
     "@prisma/client": "^5.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.1",
@@ -26,11 +26,7 @@
  }
 ```
 
-
-- Clone o projeto.
-
 - Na raiz do projeto:
-
 
 
 ```shell
@@ -47,6 +43,7 @@ npm run dev
 
 
 ### Rotas da aplicação:
+
 
 - GET /api/clients
 - PUT /api/clients/:id

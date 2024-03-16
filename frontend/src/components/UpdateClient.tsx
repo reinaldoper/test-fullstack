@@ -2,7 +2,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { FormEvent, useEffect, useState } from 'react';
 import { TChangeEvent, TClients, initialState } from '../types/TTypes';
 import clientApi from '../services/fetchApi';
-import { validaTePhone, validateCPF } from '../utils/validateCpfPhone';
+import { validaTePhone, validateCPF } from '../utils/validateCpfPhoneStatus';
 import InitialHeader from './InitialHeader';
 
 const UpdateClient = () => {
@@ -57,7 +57,7 @@ const UpdateClient = () => {
     };
 
     const options: RequestInit = {
-      method: 'POST',
+      method: 'PUT',
       headers: headers,
       body: JSON.stringify({
         nome,
@@ -69,7 +69,7 @@ const UpdateClient = () => {
     };
 
     try {
-      const { error, message } = await clientApi(options, '');
+      const { error, message } = await clientApi(options, Number(id));
       if (error) {
         alert(error);
       } else if (message) {
@@ -129,12 +129,12 @@ const UpdateClient = () => {
           <option value="Ativo">Ativo</option>
           <option value="Inativo">Inativo</option>
           <option value="Aguardando ativação">Aguardando ativação</option>
-          <option value="Desativo">Desativado</option>
+          <option value="Desativado">Desativado</option>
         </select>
         <br />
         <div className='form-buttons'>
           <button className='button-nav' type="submit">Editar</button>
-          <button className='button-back' onClick={handleBackClick} type="button">Voltar</button>
+          <button className='button-edit' onClick={handleBackClick} type="button">Voltar</button>
         </div>
       </form>
     </>

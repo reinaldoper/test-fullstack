@@ -32,3 +32,23 @@ export const  validaTePhone = (phone: string): boolean => {
 
   return regex.test(phone);
 }
+
+
+export const validateStatus = (status: string): string => {
+  switch (status) {
+    case 'Ativo':
+      return 'ativo';
+      break;
+    case 'Aguardando ativação':
+      return 'aguardando';
+      break;
+    case 'Inativo':
+      return 'inativo';
+      break;
+    case 'Desativado':
+      return 'desativado';
+      break;
+    default:
+      return 'error';
+  }
+}

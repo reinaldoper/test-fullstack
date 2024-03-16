@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import clientApi from "../services/fetchApi";
 import { TClients } from "../types/TTypes";
 import '../styles/App.css';
+import { validateStatus } from "../utils/validateCpfPhoneStatus";
 
 const InitialPage = () => {
   const navigate = useNavigate();
@@ -49,13 +50,13 @@ const InitialPage = () => {
         <p>{client.cpf}</p>
         <p>{client.telefone}</p>
       </div>
-      <div>
-        <span></span>
+      <div className="atualiza-status">
+        <p className={`${validateStatus(client.status)}`}></p>
         <p>{client.status}</p>
       </div>
       <button
         onClick={() => handleClickNavigate(client.id)}
-        className='button-nav'
+        className='button-edit'
         type="button"
       >
         Editar
