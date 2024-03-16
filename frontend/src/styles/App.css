@@ -30,7 +30,7 @@
   align-items: center; 
 }
 .custom-hr{
-  border-color: #e6e0e0;
+  border-color: #dbd8d8;
 }
 
 
@@ -69,6 +69,16 @@ select{
   border-radius: 5px;
   border-color: #333333;
 }
+
+.container-clients{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  border: 0.5px solid #dbd8d8;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
 
 .button-back{
   padding: 10px 30px;

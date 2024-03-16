@@ -5,6 +5,7 @@
 
 
 ### API que cria, buscar, edita e exclui clientes.
+
 - Para está aplicação foi utilizado o DB PostgreSQL.
 - Como ORM foi utilizado o Prisma.
 - Ambiente de desenvolvimento nodeJs v16xx.
@@ -15,13 +16,14 @@
 
 ### Dependências:
 
+
 ```shell
 "dependencies": {
     "@prisma/client": "^5.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.1",
     "express": "^4.18.2"
-}
+ }
 ```
 
 
@@ -29,15 +31,20 @@
 
 - Na raiz do projeto:
 
+
+
 ```shell
 npm install
 ```
 
+
 - Rode a aplicação:
+
 
 ```shell
 npm run dev
 ```
+
 
 ### Rotas da aplicação:
 
@@ -50,6 +57,7 @@ npm run dev
 
 ### Corpo da requisição para POST:
 
+
 ```shell
 {
   "status" : string,
@@ -60,7 +68,9 @@ npm run dev
 }
 ```
 
+
 ### Corpo da requisição para PUT:
+
 
 ```shell
 {
@@ -73,6 +83,7 @@ npm run dev
 ```
 
 ### Resposta esperada para getClients GET:
+
 
 ```shell
 message = [

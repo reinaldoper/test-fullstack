@@ -5,6 +5,7 @@ import '../styles/App.css'
 import { validaTePhone, validateCPF } from '../utils/validateCpfPhone';
 import { useNavigate } from 'react-router-dom';
 import clientApi from '../services/fetchApi';
+import InitialHeader from './InitialHeader';
 
 const CreateClient = () => {
   const navigate = useNavigate();
@@ -48,11 +49,11 @@ const CreateClient = () => {
     };
 
     try {
-      const { error, message } = await clientApi(options, null);
+      const { error, message } = await clientApi(options, '');
       if (error) {
         alert(error);
       } else if (message) {
-        alert(message);
+        alert('Cliente cadastrado com sucesso');
         setFormData(initialState);
         navigate('/');
       }
@@ -69,10 +70,7 @@ const CreateClient = () => {
 
   return (
     <>
-      <div className="container-nav">
-        <h5>Novo usuário</h5>
-        <p>Informe os campos a seguir para criar novo usuário:</p>
-      </div>
+      <InitialHeader name='Novo usuário' content='Informe os campos a seguir para criar novo usuário:' />
       <br />
       <form onSubmit={handleSubmit}>
         <input

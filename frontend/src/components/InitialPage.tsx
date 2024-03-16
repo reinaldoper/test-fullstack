@@ -1,55 +1,73 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import clientApi from "../services/fetchApi";
 import { TClients } from "../types/TTypes";
+import '../styles/App.css';
 
 const InitialPage = () => {
-  const [clients, setClients] = useState<TClients[]>([])
+  const navigate = useNavigate();
+  const [clients, setClients] = useState<TClients[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const student = async () => {
-      const headers: RequestInit = {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
+    const fetchClients = async () => {
+      try {
+        const headers: RequestInit = {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        };
+
+        const { error, message } = await clientApi(headers, '');
+        if (error) {
+          alert(error);
+          return;
         }
+        setClients(message);
+        setLoading(false);
+      } catch (error) {
+        alert("Erro ao carregar clientes. Tente mais tarde.");
       }
-
-      const {error,  message } = await clientApi(headers, null)
-      if(error){
-        alert(error)
-        return;
-      }
-      setClients(message);
-      
     };
-    student();
 
-  }, [clients])
+    fetchClients();
+  }, []);
 
-  const renderClients = clients.length && clients.map((client) => (
-    <div key={client.id}>
+
+  const handleClickNavigate = (id: number | undefined) => {
+    navigate(`/update/${id}`);
+  };
+
+  const renderClients = clients.map((client) => (
+    <div key={client.id} className="container-clients">
       <div>
-        <li>{client.nome}</li>
-        <li>{client.email}</li>
+        <p>{client.nome}</p>
+        <p>{client.email}</p>
       </div>
       <div>
-        <li>{client.cpf}</li>
-        <li>{client.telefone}</li>
+        <p>{client.cpf}</p>
+        <p>{client.telefone}</p>
       </div>
       <div>
         <span></span>
-        <li>{client.status}</li>
+        <p>{client.status}</p>
       </div>
-      <button type="button">Editar</button>
+      <button
+        onClick={() => handleClickNavigate(client.id)}
+        className='button-nav'
+        type="button"
+      >
+        Editar
+      </button>
     </div>
   ));
-  
 
   return (
     <>
-      {clients.length > 0 ? <ol>{renderClients}</ol> : <h1>Carregando...</h1>}
+      {loading ? <h1>Carregando...</h1> : <span>{renderClients}</span>}
     </>
-  )
+  );
 }
 
-export default InitialPage
+export default InitialPage;

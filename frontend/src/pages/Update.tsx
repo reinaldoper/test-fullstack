@@ -7,7 +7,10 @@ const Update = () => {
     <>
       <Header />
       <Section />
-      <UpdateClient />
+      <div className='section-app'>
+        <hr className='custom-hr' />
+        <UpdateClient />
+      </div>
     </>
   )
 }

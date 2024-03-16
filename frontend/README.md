@@ -1,4 +1,4 @@
-# Aplicativo de Gerenciamento de Clientes, feito em React-vite e typeScript:
+# Aplicativo de Gerenciamento de Clientes, feito em React-vite e typeScript, e usando a lib w3.css:
 
 - Este projeto tem a finalidade de criar, listar, editar e excluir clientes.
 
