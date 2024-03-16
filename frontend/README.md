@@ -100,3 +100,8 @@ frontend/
 - package.json: Dependências e scripts do projeto.
 
 
+### Considerações:
+
+- Este projeto tem verificador de CPF.
+- Este projeto exige o formato (xx) xxxxx-xxxx para números de telefones.
+- Este projeto exige email unicos.
