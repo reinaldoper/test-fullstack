@@ -42,7 +42,7 @@
 
 .button-nav {
   padding: 10px 30px;
-  background-color: rgb(250, 155, 67);
+  background-color: #E29933;
   border: none;
   border-radius: 5px;
   color: aliceblue;
@@ -73,6 +73,7 @@ select{
 .container-clients{
   display: flex;
   justify-content: space-between;
+  position: relative;
   align-items: center; 
   border: 0.5px solid #dbd8d8;
   padding: 5px;
@@ -80,10 +81,19 @@ select{
   width: 100%;
 }
 
+.cpf{
+  position: absolute;
+  left: 30%;
+}
+
+.status{
+  position: absolute;
+  left: 60%;
+}
 
 .aguardando{
   margin: auto;
-  background-color: rgb(250, 155, 67);
+  background-color: #D3A710;
   border-radius: 50%;
   width: 10px;
   height: 10px;
@@ -92,7 +102,7 @@ select{
 
 .ativo{
   margin: auto;
-  background-color: rgba(3, 170, 73, 0.795);
+  background-color: #4AAD5B;
   border-radius: 50%;
   width: 10px;
   height: 10px;
@@ -101,7 +111,7 @@ select{
 
 .inativo{
   margin: auto;
-  background-color: rgba(161, 5, 18, 0.979);
+  background-color: #D73240;
   border-radius: 50%;
   width: 10px;
   height: 10px;
@@ -110,7 +120,7 @@ select{
 
 .desativado{
   margin: auto;
-  background-color: rgb(187, 184, 184);
+  background-color: #D2D2D2;
   border-radius: 50%;
   width: 10px;
   height: 10px;
@@ -127,18 +137,40 @@ select{
   background-color: rgb(245, 241, 237);
   border: none;
   border-radius: 5px;
-  color: rgb(250, 155, 67);
+  color: #E29933;
   cursor: pointer;
-  border: 0.5px solid rgb(250, 155, 67);
+  border: 0.5px solid #E29933;
   margin-left: 35px;
 }
 
 .button-edit:hover{
-  background-color: rgb(250, 155, 67);
+  background-color: #E29933;
   color: #dbd8d8;
-  border:rgb(250, 155, 67)
 }
 
 .form-buttons{
   display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  
+  .container-clients > div > p{
+    font-size: small;
+  }
+  .button-edit{
+    font-size: small;
+    padding: 5px 15px;
+  }
+  .button-nav{
+    font-size: small;
+    padding: 5px 15px;
+  }
+  .container-nav > h5{
+    font-size: small;
+  }
+
+  .container-nav > p{
+    font-size: small;
+  }
+  
 }

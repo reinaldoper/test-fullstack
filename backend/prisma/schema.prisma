@@ -11,7 +11,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = "postgres://gzbonyak:ROabHgwd0uc-vycKZxKN2O1kAW2chmBd@tuffi.db.elephantsql.com/gzbonyak"
 }
 
 model Clients {

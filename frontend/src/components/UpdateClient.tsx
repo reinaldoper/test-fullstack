@@ -95,7 +95,7 @@ const UpdateClient = () => {
           type="text"
           placeholder='Nome'
           name="nome"
-          value={formData.nome}
+          value={formData.nome ? formData.nome:'Carregando'}
           onChange={handleChange}
           required />
         <br />
@@ -103,7 +103,7 @@ const UpdateClient = () => {
           type="email"
           placeholder='E-mail'
           name="email"
-          value={formData.email}
+          value={formData.email ? formData.email: 'Carregando'}
           onChange={handleChange}
           required />
         <br />
@@ -111,7 +111,7 @@ const UpdateClient = () => {
           type="text"
           placeholder='CPF'
           name="cpf"
-          value={formData.cpf}
+          value={formData.cpf ? formData.cpf: 'Carregando'}
           onChange={handleChange}
           required
         />
@@ -120,11 +120,11 @@ const UpdateClient = () => {
           type="tel"
           placeholder='Telefone (XX) XXXXX-XXXX'
           name="telefone"
-          value={formData.telefone}
+          value={formData.telefone ? formData.telefone: 'Carregando'}
           onChange={handleChange}
           required />
         <br />
-        <select name='status' value={formData.status} onChange={handleChange} required >
+        <select name='status' value={formData.status ? formData.status: 'Carregando'} onChange={handleChange} required >
           <option value="">Status</option>
           <option value="Ativo">Ativo</option>
           <option value="Inativo">Inativo</option>

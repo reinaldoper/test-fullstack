@@ -7,6 +7,7 @@
 ### API que cria, buscar, edita e exclui clientes.
 
 - Para está aplicação foi utilizado o DB PostgreSQL.
+- Hospedagem dos dados no ElephantSql.
 - Como ORM foi utilizado o Prisma.
 - Ambiente de desenvolvimento nodeJs v16xx.
 

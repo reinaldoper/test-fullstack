@@ -46,11 +46,11 @@ const InitialPage = () => {
         <p>{client.nome}</p>
         <p>{client.email}</p>
       </div>
-      <div>
+      <div className="cpf">
         <p>{client.cpf}</p>
         <p>{client.telefone}</p>
       </div>
-      <div className="atualiza-status">
+      <div className="atualiza-status status">
         <p className={`${validateStatus(client.status)}`}></p>
         <p>{client.status}</p>
       </div>
