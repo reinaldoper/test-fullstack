@@ -34,9 +34,19 @@
 }
 
 
-.container-nav > h5, p{
+.container-nav > p{
   font-size: medium;
-  color: #4e4d4d;
+  color: #61676F;
+}
+
+.list-map{
+  font-size: medium;
+  color: #61676F;
+}
+
+.container-nav > h5{
+  font-size: medium;
+  color: #494a4b;
 }
 
 
@@ -154,7 +164,7 @@ select{
 
 @media screen and (max-width: 600px) {
   
-  .container-clients > div > p{
+  .container-clients > div > div{
     font-size: small;
   }
   .button-edit{

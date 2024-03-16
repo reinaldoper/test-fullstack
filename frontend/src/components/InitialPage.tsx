@@ -44,15 +44,15 @@ const InitialPage = () => {
     <div key={client.id} className="container-clients">
       <div>
         <p>{client.nome}</p>
-        <p>{client.email}</p>
+        <div className="list-map">{client.email}</div>
       </div>
       <div className="cpf">
         <p>{client.cpf}</p>
-        <p>{client.telefone}</p>
+        <div className="list-map">{client.telefone}</div>
       </div>
       <div className="atualiza-status status">
         <p className={`${validateStatus(client.status)}`}></p>
-        <p>{client.status}</p>
+        <div className="list-map">{client.status}</div>
       </div>
       <button
         onClick={() => handleClickNavigate(client.id)}
@@ -64,9 +64,12 @@ const InitialPage = () => {
     </div>
   ));
 
+  const numberClients = `Exibindo ${clients.length} clientes`;
+
   return (
     <>
       {loading ? <h1>Carregando...</h1> : <span>{renderClients}</span>}
+      <div className="list-map">{numberClients}</div>
     </>
   );
 }
