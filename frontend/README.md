@@ -9,7 +9,9 @@
 
 ---
 
+
 ### Dependencies: 
+
 
 ```shell
   {
@@ -21,7 +23,9 @@
 
 ---
 
+
 ### Dependencias de desenvolvimento: 
+
 
 ```shell
 {
@@ -34,7 +38,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "typescript": "^5.2.2",
-    "vite": "^5.1.6"
+    "vite": "^5.0.8"
   }
 ```
 
@@ -46,6 +50,14 @@
  npm install && npm run dev
  ```
 
+### Testes:
+
+
+```shell
+npm run test
+```
+
+
 ### Estrutura do Projeto:
 
 - O projeto Clients segue uma estrutura organizada para garantir clareza e manutenibilidade do código. 
@@ -53,8 +65,8 @@
 
 ```shell
 frontend/
+|-- .jest/
 |-- src/
-|   |-- .jest/
 |   |-- assets/
 |   |-- environment/
 |   |-- components/
