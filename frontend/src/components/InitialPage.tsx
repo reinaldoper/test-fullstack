@@ -34,6 +34,7 @@ const InitialPage = () => {
 
     fetchClients();
   }, []);
+  
 
 
   const handleClickNavigate = (id: number | undefined) => {
