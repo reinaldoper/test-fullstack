@@ -1,10 +1,10 @@
-# Aplicativo de Gerenciamento de Clientes, feito em React-vite e typeScript, e usando a lib w3.css:
+# Aplicativo de Gerenciamento de Clientes:
 
-- Este projeto tem a finalidade de criar, listar, editar clientes.
+- Este é um aplicativo desenvolvido em React-vite e TypeScript, utilizando a biblioteca w3.css para criar, listar e editar clientes.
 
-## Este projeto necessita do backend em execução:
+## Pré-requisitos:
 
-- Entre na pasta backend e siga os passos para rodar a API.
+- Para executar este projeto, é necessário ter o backend em execução. Siga as instruções na pasta "backend" para iniciar a API.
 
 
 ---
@@ -43,7 +43,10 @@
 ```
 
 
-### Dentro da pasta frontend:
+### Instalação e Execução:
+
+
+- Dentro da pasta "frontend", execute os seguintes comandos:
 
  
  ```shell
@@ -51,6 +54,9 @@
  ```
 
 ### Testes:
+
+
+- Para executar os testes, utilize o seguinte comando:
 
 
 ```shell
@@ -102,6 +108,6 @@ frontend/
 
 ### Considerações:
 
-- Este projeto tem verificador de CPF.
-- Este projeto exige o formato (xx) xxxxx-xxxx para números de telefones.
-- Este projeto exige email unicos.
+- Este projeto inclui um verificador de CPF.
+- Números de telefone devem seguir o formato (xx) xxxxx-xxxx.
+- E-mails devem ser únicos no sistema.

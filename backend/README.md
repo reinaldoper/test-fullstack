@@ -1,15 +1,17 @@
 ## Teste técnico full-stack uol.
 
+- Neste teste técnico, foi desenvolvida uma API que realiza operações de criação, busca, edição e exclusão de clientes. 
+- Abaixo estão os detalhes relevantes sobre a aplicação:
+
 
 ---
 
 
-### API que cria, buscar, edita e exclui clientes.
+### Tecnologias Utilizadas.
 
-- Para está aplicação foi utilizado o DB PostgreSQL.
-- Hospedagem dos dados no ElephantSql.
-- Como ORM foi utilizado o Prisma.
-- Ambiente de desenvolvimento nodeJs v16xx.
+- Banco de Dados: PostgreSQL, hospedado no ElephantSQL.
+- ORM: Prisma.
+- Ambiente de Desenvolvimento: Node.js v16xx.
 
 
 ---
@@ -27,15 +29,17 @@
  }
 ```
 
-- Na raiz do projeto:
+- Para instalar as dependências, execute o seguinte comando na raiz do projeto:
 
 
 ```shell
 npm install
 ```
 
+### Executando a Aplicação:
 
-- Rode a aplicação:
+
+- Para iniciar a aplicação, utilize o seguinte comando::
 
 
 ```shell
@@ -43,7 +47,7 @@ npm run dev
 ```
 
 
-### Rotas da aplicação:
+### Rotas da Aplicação:
 
 
 - GET /api/clients
@@ -53,7 +57,7 @@ npm run dev
 - POST /api/clients
 
 
-### Corpo da requisição para POST:
+### Corpo da Requisição para POST e PUT:
 
 
 ```shell
@@ -66,26 +70,13 @@ npm run dev
 }
 ```
 
-
-### Corpo da requisição para PUT:
-
-
-```shell
-{
-  "status" : string,
-  "email": string,
-  "telefone": string,
-  "cpf": string,
-  "nome": string
-}
-```
-
-### Resposta esperada para getClients GET:
+### Resposta Esperada para GET /api/clients:
 
 
 ```shell
 message = [
   {
+  "id": number,
   "status" : string,
   "email": string,
   "telefone": string,
@@ -94,3 +85,16 @@ message = [
   }
 ]
 ```
+
+
+### Resposta esperada para GET /api/clients/:id:
+
+
+```shell
+{
+  "status" : string,
+  "email": string,
+  "telefone": string,
+  "cpf": string,
+  "nome": string
+}
