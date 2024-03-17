@@ -98,3 +98,14 @@ message = [
   "cpf": string,
   "nome": string
 }
+```
+
+### Testando a API:
+
+
+- Rode o seguinte comando para executar os testes:
+
+
+```shell
+npm test
+```
