@@ -9,7 +9,7 @@ describe("Should return a list of clients.", () => {
   it("should return registered clients.", async () => {
     jest.spyOn(fetchApi, "default").mockResolvedValueOnce({ message: clients });
 
-    
+
     render(
       <MemoryRouter>
         <InitialPage />
@@ -24,6 +24,28 @@ describe("Should return a list of clients.", () => {
       expect(button[0]).toBeInTheDocument();
 
       button[0].click();
+    });
+  });
+
+  it("should return error.", async () => {
+    let alertMessage = '';
+    window.alert = (message) => {
+      alertMessage = message;
+    };
+
+    render(
+      <MemoryRouter>
+        <InitialPage />
+      </MemoryRouter>
+    );
+
+    const msg = screen.getByText('Exibindo 0 clientes');
+    expect(msg).toBeInTheDocument()
+
+    await waitFor(() => {
+      expect(alertMessage).toBe('Erro ao carregar clientes. Tente mais tarde.');
+
+      alertMessage = '';
     });
   });
 });
