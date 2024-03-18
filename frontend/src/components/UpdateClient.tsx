@@ -10,6 +10,8 @@ const UpdateClient = () => {
   const [formData, setFormData] = useState<TClients>(initialState);
   const { id } = useParams();
 
+  const { telefone, cpf, nome, email, status } = formData;
+
   useEffect(() => {
     const fetchClient = async () => {
       const headers = {
@@ -39,7 +41,6 @@ const UpdateClient = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const { telefone, cpf, nome, email, status } = formData;
 
     if (!validaTePhone(telefone)) {
       alert('Por favor, insira um número de telefone válido.');
@@ -95,7 +96,7 @@ const UpdateClient = () => {
           type="text"
           placeholder='Nome'
           name="nome"
-          value={formData.nome ? formData.nome:'Carregando'}
+          value={nome ? nome:'Carregando'}
           onChange={handleChange}
           required />
         <br />
@@ -103,7 +104,7 @@ const UpdateClient = () => {
           type="email"
           placeholder='E-mail'
           name="email"
-          value={formData.email ? formData.email: 'Carregando'}
+          value={email ? email: 'Carregando'}
           onChange={handleChange}
           required />
         <br />
@@ -111,7 +112,7 @@ const UpdateClient = () => {
           type="text"
           placeholder='CPF'
           name="cpf"
-          value={formData.cpf ? formData.cpf: 'Carregando'}
+          value={cpf ? cpf: 'Carregando'}
           onChange={handleChange}
           required
         />
@@ -120,11 +121,11 @@ const UpdateClient = () => {
           type="tel"
           placeholder='Telefone (XX) XXXXX-XXXX'
           name="telefone"
-          value={formData.telefone ? formData.telefone: 'Carregando'}
+          value={telefone ? telefone: 'Carregando'}
           onChange={handleChange}
           required />
         <br />
-        <select name='status' value={formData.status ? formData.status: 'Carregando'} onChange={handleChange} required >
+        <select name='status' value={status ? status: 'Carregando'} onChange={handleChange} required >
           <option value="">Status</option>
           <option value="Ativo">Ativo</option>
           <option value="Inativo">Inativo</option>

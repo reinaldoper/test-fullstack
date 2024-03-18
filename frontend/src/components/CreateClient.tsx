@@ -12,6 +12,8 @@ const CreateClient = () => {
 
   const [formData, setFormData] = useState<TClients>(initialState);
 
+  const { telefone, cpf, nome, email, status } = formData;
+
   const handleChange = ({ target: { name, value } }: TChangeEvent) => {
     setFormData(prevData => ({ ...prevData, [name]: value }));
   };
@@ -19,7 +21,7 @@ const CreateClient = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const { telefone, cpf, nome, email, status } = formData;
+    
 
     if (!validaTePhone(telefone)) {
       alert('Por favor, insira um número de telefone válido.');
@@ -67,7 +69,6 @@ const CreateClient = () => {
   };
 
 
-
   return (
     <>
       <InitialHeader name='Novo usuário' content='Informe os campos a seguir para criar novo usuário:' />
@@ -77,7 +78,7 @@ const CreateClient = () => {
           type="text"
           placeholder='Nome'
           name="nome"
-          value={formData.nome}
+          value={nome}
           onChange={handleChange}
           required />
         <br />
@@ -85,7 +86,7 @@ const CreateClient = () => {
           type="email"
           placeholder='E-mail'
           name="email"
-          value={formData.email}
+          value={email}
           onChange={handleChange}
           required />
         <br />
@@ -93,7 +94,7 @@ const CreateClient = () => {
           type="text"
           placeholder='CPF'
           name="cpf"
-          value={formData.cpf}
+          value={cpf}
           onChange={handleChange}
           required
         />
@@ -102,11 +103,11 @@ const CreateClient = () => {
           type="tel"
           placeholder='Telefone (XX) XXXXX-XXXX'
           name="telefone"
-          value={formData.telefone}
+          value={telefone}
           onChange={handleChange}
           required />
         <br />
-        <select name='status' value={formData.status} onChange={handleChange} required >
+        <select name='status' value={status} onChange={handleChange} required >
           <option value="">Status</option>
           <option value="Ativo">Ativo</option>
           <option value="Inativo">Inativo</option>
