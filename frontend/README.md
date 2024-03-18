@@ -56,12 +56,18 @@
 ### Testes:
 
 
-- Para executar os testes, utilize o seguinte comando:
+- Para executar os testes, utilize os seguintes comandos:
 
 
 ```shell
 npm run test
 ```
+
+
+```shell
+npm run test:coverage
+```
+
 
 
 ### Estrutura do Projeto:
